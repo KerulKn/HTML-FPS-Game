@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My FPS Game</title>
+
+    <style>
+      @font-face {
+        font-family: "Danger";
+        src: url("Burton_s_nigthmare2000.ttf") format("opentype");
+      }
+
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: "Danger", Arial, sans-serif; /* Use the Danger font with fallbacks */
+      }
+
+      canvas {
+        display: block;
+      }
+
+    </style>
+  </head>
+  <body>
+  
+
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/FBXLoader.js"></script>
+
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r128/examples/js/loaders/MTLLoader.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r128/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        displayGameOver();
+      });
+    </script>
+    
+    <script src="Arena.js"></script>
+  </body>
+</html>

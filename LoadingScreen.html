@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Start</title>
+  <style>
+    @font-face{
+      font-family: "Danger";
+      src: url("Burton_s_nigthmare2000.ttf") format("opentype");
+    }
+      
+    body 
+
+  
+    {
+      margin: 0;
+      overflow: hidden;
+      font-family: "Danger", Arial, sans-serif; /* Use the Danger font with fallbacks */
+      text-align: center;
+      background-color:#240072  ; /* Change background color here */
+      background-image: url('abandoned-house.jpg'); /* Add the path to your image here */
+      background-size: cover;
+      background-position: top;
+    }
+
+    #start-screen 
+    {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1 
+    {
+      font-size: 74px;
+      margin-bottom: 280px;
+      
+    }
+
+    #start-button
+     {
+      padding: 13px 13px;
+      font-size: 30px;
+      background-image: url('abandoned-house.jpg');
+      color: #fff;
+      border-radius: 60px 60px 60px 60px; /* kiri atas, kanan atas, kanan bawah, kiri bawah */;
+      cursor: pointer;
+    }
+
+    #exit-button
+    {
+     padding: 10px 30px;
+     font-size: 30px;
+     position: absolute;
+     top: 107%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-image: url('abandoned-house.jpg');
+     color: #fff;/*image for text*/
+     border-radius: 60px 60px 60px 60px; /* kiri atas, kanan atas, kanan bawah, kiri bawah */;
+     cursor: pointer;
+    }
+
+    #audio-button
+    {
+        font-size: 20px;
+        position: absolute;
+        top: -10%;
+        left: -140%;
+        background-image:url('abandoned-house.jpg'); /*tukar image dlm botton audio*/;
+        border-radius: 10px 10px 10px 10px; /* kiri atas, kanan atas, kanan bawah, kiri bawah */;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="start-screen">
+    <h1> Timbak Timbak </h1>
+    <button onclick="startGame()" id="start-button">Start Game</button>
+    <button onclick="exitGame()" id="exit-button">Exit</button>
+    <button onclick="audio()"id="audio-button">&#128266;</button>
+  </div>
+
+  <script>
+    function startGame() 
+    {
+      // Add your game logic here to start the game
+      console.log("Game started");
+      window.location.href = "Arena.html";
+    }
+
+    function exitGame()
+    {
+      console.log("Exit");
+      window.close();
+    }
+
+    function audio()
+    {
+        var audioElement = new Audio('Music loading.mp3');
+        audioElement.autoplay = false;
+        audioElement.play();
+    }  
+    
+  </script>
+</body>
+</html>
